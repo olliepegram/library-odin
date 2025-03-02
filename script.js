@@ -6,14 +6,18 @@ let myLibrary = [];
 
 function displayBooks() {
 	const bookEl = document.createElement('ul');
+	bookEl.classList.add('book-item');
 	bookEl.innerHTML = myLibrary
 		.map((book, index) => {
-			return `<li class='book-item' data-book-id="${book.id}">
-						<button class='read' data-index=${index}>${
+			return `<li class='book' data-book-id="${book.id}">
+						
+                      <h2>${book.title}</h2> <p>Author: ${
+				book.author
+			}</p> <span>Pages: ${book.pages}</span>
+					
+                  <div class='buttons'>  <button class='read' data-index=${index}>${
 				book.read ? 'Read already' : 'Not read yet'
-			}</button>
-                      ${book.title} ${book.author} ${book.pages}
-                      <button class='delete'>X</button>
+			}</button> <button class='delete'>Delete</button></div>
                    </li>`;
 		})
 		.join('');
@@ -29,7 +33,7 @@ function displayBooks() {
 }
 
 function removeBook(event) {
-	const bookItem = event.target.closest('.book-item');
+	const bookItem = event.target.closest('.book');
 	const bookId = Number(bookItem.dataset.bookId);
 
 	myLibrary = myLibrary.filter((book) => {

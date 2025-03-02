@@ -1,3 +1,66 @@
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
 .book-form {
 	display: none;
+}
+
+.books {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 100px 10% 100px 10%;
+}
+
+.book-item {
+	display: flex;
+	list-style-type: none;
+}
+
+.book {
+	width: 250px;
+	height: 250px;
+	padding: 20px;
+	margin: 20px;
+	background-color: beige;
+	border-radius: 5px;
+	position: relative;
+}
+
+.book h2 {
+	color: #333;
+	padding: 0;
+	margin: 0;
+}
+
+.book p {
+	margin: 0;
+	padding: 5px 0;
+}
+
+.buttons {
+	display: flex;
+	margin-top: 20px;
+}
+
+.delete {
+	border: none;
+	background: #cb96fc;
+	color: #fff;
+	border-radius: 5px;
+	width: 100%;
+	cursor: pointer;
+	margin: 10px;
+}
+
+.read {
+	border: 1px solid #333;
+	background: beige;
+	color: #233;
+	border-radius: 5px;
+	padding: 10px;
+	width: 100%;
+	margin: 10px;
+	cursor: pointer;
 }
