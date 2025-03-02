@@ -26,31 +26,61 @@
 		/>
 	</head>
 	<body>
+		<header>
+			<div class="header-inner">
+				<h1>My Library</h1>
+				<button class="new-book-button">New Book</button>
+			</div>
+		</header>
 		<div class="books"></div>
-		<button class="new-book-button">New Book</button>
-		<form class="book-form">
-			<label for="title">Title</label>
-			<input
-				name="title"
-				type="text"
-			/>
-			<label for="author">Author</label>
-			<input
-				name="author"
-				type="text"
-			/>
-			<label for="pages">Number</label>
-			<input
-				name="pages"
-				type="number"
-			/>
-			<label for="read">Have you read this book yet?</label>
-			<input
-				type="checkbox"
-				name="read"
-			/>
-			<button type="submit">Submit</button>
-		</form>
+
+		<div class="modal">
+			<form class="book-form">
+				<div class="form-header">
+					<div>
+						<h2>Add A Book</h2>
+					</div>
+					<div>
+						<button class="close-modal">X</button>
+					</div>
+				</div>
+				<div class="form-input-container">
+					<label for="title">Title</label>
+					<input
+						name="title"
+						type="text"
+						required
+					/>
+				</div>
+				<div class="form-input-container">
+					<label for="author">Author</label>
+					<input
+						name="author"
+						required
+						type="text"
+					/>
+				</div>
+				<div class="form-input-container">
+					<label for="pages">Number</label>
+					<input
+						name="pages"
+						required
+						type="number"
+					/>
+				</div>
+				<div class="read-container">
+					<div class="read-input">
+						<label for="read">Have you read this book yet?</label>
+						<input
+							type="checkbox"
+							required
+							name="read"
+						/>
+					</div>
+				</div>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
 		<script src="script.js"></script>
 	</body>
 </html>

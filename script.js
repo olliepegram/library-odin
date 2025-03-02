@@ -1,6 +1,8 @@
 const booksEl = document.querySelector('.books');
 const newBookButton = document.querySelector('.new-book-button');
 const bookForm = document.querySelector('.book-form');
+const modal = document.querySelector('.modal');
+const closeButton = document.querySelector('.close-modal');
 
 let myLibrary = [];
 
@@ -94,7 +96,7 @@ addBookToLibrary('Red Rising', 'Pierce Brown', 416, false, Math.random());
 addBookToLibrary('Solo Leveling', 'Chugong', 322, true, Math.random());
 
 newBookButton.addEventListener('click', () => {
-	bookForm.style.display = 'block';
+	modal.style.display = 'block';
 });
 
 bookForm.addEventListener('submit', (e) => {
@@ -106,4 +108,9 @@ bookForm.addEventListener('submit', (e) => {
 		e.target[3].value,
 		Math.random()
 	);
+	modal.style.display = 'none';
+});
+
+closeButton.addEventListener('click', () => {
+	modal.style.display = 'none';
 });
